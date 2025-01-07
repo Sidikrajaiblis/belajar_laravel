@@ -107,3 +107,10 @@ Route::get('/latihan1/{nama}/{telp}/{jenisbarang}/{namabarang}/{jumlah}/{pembaya
             "Potongan : ". number_format($potongan) ."<hr>".
             "Total pembayaran : ". number_format($total_pembayaran) ;
 });
+
+Route::get('/siswa', function () {
+
+    $data_siswa = ['shiroko','hoshino',"serika","arona","nonomi"];
+    
+    return view('tampil',compact('data_siswa'));
+});
