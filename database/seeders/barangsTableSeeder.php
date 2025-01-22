@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class barangsTableSeeder extends Seeder
+class BarangsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,13 +15,13 @@ class barangsTableSeeder extends Seeder
      */
     public function run()
     {
-        $barang = [
+        $barangs = [
             ['nama_barang' => 'jam', 'merk' => 'gucci', 'harga' => 100000],
             ['nama_barang' => 'sepatu', 'merk' => 'nike', 'harga' => 200000],
             ['nama_barang' => 'tas', 'merk' => 'hermes', 'harga' => 300000],
             ['nama_barang' => 'kacamata', 'merk' => 'rayban', 'harga' => 400000],
             ['nama_barang' => 'topi', 'merk' => 'new era', 'harga' => 500000],
         ];
-        DB::table('barang')->insert($barang);
+        DB::table('barangs')->insert($barangs);
     }
 }

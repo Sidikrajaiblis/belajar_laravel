@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\postscontroller;
+use App\Http\Controllers\siswascontroller;
+use App\Http\Controllers\ppdbscontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -114,3 +119,23 @@ Route::get('/siswa', function () {
     
     return view('tampil',compact('data_siswa'));
 });
+
+
+// Route::get('/barang', function () {
+
+//     $barang = barang::all();       
+//     return view('tampil_barang',compact('barang'));
+// });
+
+Route::get('/post', [postscontroller::class,'menampilkan']);
+Route::get('/barang', [postscontroller::class,'menampilkan2']);
+
+route::resource('siswa',siswascontroller::class);
+route::resource('ppdb',ppdbscontroller::class);
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
