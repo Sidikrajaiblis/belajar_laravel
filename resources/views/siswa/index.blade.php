@@ -23,6 +23,7 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Kelas</th>
+                            <th scope="col">Cover</th>
                             <th scope="col">Action</th>
                         </thead>
                         @php $no = 1; @endphp
@@ -34,6 +35,9 @@
                             <td>{{ $data->nama }}</td>
                             <td>{{ $data->jenis_kelamin}}</td>
                             <td>{{ $data->kelas }}</td>
+                            <td>
+                                <img src="{{ asset('/images/siswa/' . $data->cover) }}" alt="" width="100">
+                            </td>
                             <td>
                                 <a href="{{ route('siswa.edit', $data->id)}}" class="btn btn-success">Edit</a>
                                 <a href="{{ route('siswa.show', $data->id)}}" class="btn btn-warning">show</a>

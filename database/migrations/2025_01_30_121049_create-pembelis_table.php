@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('siswas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('nis')->unique();
-            $table->string('nama');
-            $table->string('jenis_kelamin');
-            $table->string('kelas');
-            $table->string('cover');
+        Schema::create('pembelis', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_pembeli');
+            $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
+            $table->string('telepon');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('siswas');
+        Schema::dropIfExists('pembelis');
     }
 };

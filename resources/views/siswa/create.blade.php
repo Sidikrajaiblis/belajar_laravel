@@ -12,11 +12,11 @@
                     @csrf
                     <div class="form-group">
                         <label>Nis</label>
-                        <input type="number" class="form-control" name="nis">
+                        <input type="number" class="form-control" name="nis" required>
                     </div>
                     <div class="form-group">
                         <label>Nama</label>
-                        <input type="text" class="form-control" name="nama">
+                        <input type="text" class="form-control" name="nama" required>
                     </div>
                     <div class="form-group">
                         <label>Jenis Kelamin</label> <br>
@@ -25,12 +25,16 @@
                     </div><br>
                     <div class="form-group">
                         <label>Kelas</label>
-                        <select class="form-control" name="kelas">
+                        <select class="form-control" name="kelas" required>
                             <option header>Pilih Kelas</option>
                             <option value="XI RPL 1">XI RPL 1</option>
                             <option value="XI RPL 2">XI RPL 2</option>  
                             <option value="XI RPL 3">XI RPL 3</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Cover</label>
+                        <input type="file" class="form-control" name="cover" required>
                     </div><br>
                         <div class="form-group">
                         <button type="submit" class="btn btn-primary" name="save">Submit</button>

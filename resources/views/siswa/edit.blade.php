@@ -13,11 +13,11 @@
                     @method('PUT')
                     <div class="form-group">
                         <label>Nis</label>
-                        <input type="number" class="form-control" value="{{ $siswa->nis }}" name="nis">
+                        <input type="number" class="form-control" value="{{ $siswa->nis }}" name="nis" required>
                     </div>
                     <div class="form-group">
                         <label>Nama</label>
-                        <input type="text" class="form-control" value="{{ $siswa->nama }}" name="nama">
+                        <input type="text" class="form-control" value="{{ $siswa->nama }}" name="nama" required>
                     </div>
                     <div class="form-group">
                         <label>Jenis Kelamin</label> <br>
@@ -31,6 +31,11 @@
                             <option value="XI RPL 2">XI RPL 2</option>  
                             <option value="XI RPL 3">XI RPL 3</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Cover</label>
+                        <img src="{{ asset('/images/siswa/' . $siswa->cover) }}" width="100">
+                        <input type="file" class="form-control" name="cover" required>
                     </div><br>
                         <div class="form-group">
                         <button type="submit" class="btn btn-primary" name="save">Submit</button>
